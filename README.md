@@ -41,7 +41,7 @@ The site imitates the old Google Site: a dark header with a horizontal menu, and
 - `overrides/main.html`: the title banner. Pages can set `banner` and `banner_subtitle` in their front matter.
 - `docs/assets/css/extra.css`: the colors (`--gs-*`), menu, banner and headings.
 
-Below 1360px wide the menu is replaced by the standard navigation sidebar or drawer.
+Below 1280px wide the menu is replaced by the standard navigation sidebar or drawer.
 
 ## HyperASHS figures
 
