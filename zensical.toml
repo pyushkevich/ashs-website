@@ -17,14 +17,14 @@ nav = [
       { "T2w + T1w Model Requirements" = "hyperashs/mri-data/t2-t1-model.md" },
       { "T1w-Only Model Requirements" = "hyperashs/mri-data/t1-model.md" },
     ] },
-    { "Cloud HyperASHS" = [
+    { "Cloud" = [
       "hyperashs/cloud/index.md",
-      { "Cloud HyperASHS for T2-MRI" = "hyperashs/cloud/t2-mri.md" },
-      { "Cloud HyperASHS for T1-MRI" = "hyperashs/cloud/t1-mri.md" },
+      { "T2-MRI Tutorial" = "hyperashs/cloud/t2-mri.md" },
+      { "T1-MRI Tutorial" = "hyperashs/cloud/t1-mri.md" },
       { "Command-Line Tutorial" = "hyperashs/cloud/command-line.md" },
       { "Troubleshooting" = "hyperashs/cloud/troubleshooting.md" },
     ] },
-    { "Local HyperASHS" = [
+    { "Local" = [
       { "Installation" = "hyperashs/installation.md" },
       { "Basic Usage" = "hyperashs/usage.md" },
       { "Training a Model" = "hyperashs/training.md" },
@@ -40,14 +40,14 @@ nav = [
       { "ASHS-PMC-T1 Atlas Requirements" = "ashs/mri-data/pmc-t1-atlas.md" },
       { "ADNI3 Data" = "ashs/mri-data/adni3.md" },
     ] },
-    { "Cloud ASHS" = [
+    { "Cloud" = [
       "ashs/cloud/index.md",
-      { "Cloud ASHS for T2-MRI" = "ashs/cloud/t2-mri.md" },
-      { "Cloud ASHS for T1-MRI" = "ashs/cloud/t1-mri.md" },
+      { "T2-MRI Tutorial" = "ashs/cloud/t2-mri.md" },
+      { "T1-MRI Tutorial" = "ashs/cloud/t1-mri.md" },
       { "Command-Line Tutorial" = "ashs/cloud/command-line.md" },
       { "Troubleshooting" = "ashs/cloud/troubleshooting.md" },
     ] },
-    { "Local ASHS" = [
+    { "Local" = [
       { "Installation" = "ashs/local/installation.md" },
       { "Basic Usage" = "ashs/local/usage.md" },
       { "Building an Atlas for T2-MRI" = "ashs/local/atlas-t2.md" },
