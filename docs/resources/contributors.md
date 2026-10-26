@@ -22,11 +22,10 @@ ASHS and HyperASHS are the work of many people. Key contributors include:
 - **David Berron**: ABC 3T and 7T and Magdeburg 7T atlases
 - **Ana Daugherty**, **Valerie Carr** and the [Hippocampal Subfields Group](https://hippocampalsubfields.com/): harmonized hippocampal body protocol used by the HSG_Body_Atlas model
 
-## Clinical collaborators and data
+## Leadership and clinical collaborators
 
-- **David Wolk**: Penn Memory Center
-- **Sandhitsu Das**
-- **Michael Tran Duong** and **Christopher Brown**: HyperASHS
+- **David Wolk**, **Sandhitsu Das** and **Christopher Brown**: project leadership and clinical collaboration
+- **Michael Tran Duong**: HyperASHS
 - **Susanne Mueller**: the original 2010 ASHS paper and the VACIND atlas
 
 See [Citations](citations.md) for the papers describing this work, and [Source Code](source-code.md) for the repositories.
