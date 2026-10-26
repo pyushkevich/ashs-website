@@ -53,7 +53,7 @@ This model uses the same segmentation protocol as PMC_Atlas, so measures of the 
 Use this model if:
 
 - You have T2w + T1w MRI as for PMC_Atlas, and
-- You want hippocampal subfields in the hippocampal body, following the harmonized protocol of the [Hippocampal Subfields Group](http://hippocampalsubfields.com/)
+- You want hippocampal subfields in the hippocampal body, following the harmonized protocol of the [Hippocampal Subfields Group (HSG)](https://hippocampalsubfields.com/)
 
 ### Train a custom model
 

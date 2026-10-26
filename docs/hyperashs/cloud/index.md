@@ -8,11 +8,11 @@ The easiest way to try out HyperASHS is through our web-based Distributed Segmen
 |---|---|---|
 | **HyperASHS-PMC** | [PMC_Atlas](../mri-data/t2-t1-model.md) | T2w + T1w MRI |
 | **HyperASHS-PMC-T1** | [PMC_T1_Atlas](../mri-data/t1-model.md) | T1w MRI only |
-| **HyperASHS-HSG-Body** | [HSG_Body_Atlas](../mri-data/t2-t1-model.md) | T2w + T1w MRI |
+| **HyperASHS-HSG-Body** | [HSG_Body_Atlas](../mri-data/t2-t1-model.md) ([HSG harmonized protocol](https://hippocampalsubfields.com/)) | T2w + T1w MRI |
 
 ## Requirements
 
-- You will need to install [ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP3) 3.8 or later
+- You will need to install [ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4) **4.6 or later**. HyperASHS returns segmentations in a different (finer) voxel space than the T2-weighted MRI, and earlier versions of ITK-SNAP cannot handle this
 - You need a Google account (e.g., Gmail) to log in to the server
 - Your data must be compatible with the model behind the service you choose (see [MRI Data](../mri-data/index.md))
 

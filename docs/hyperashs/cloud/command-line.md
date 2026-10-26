@@ -2,6 +2,9 @@
 
 This tutorial uses the **HyperASHS-PMC** service. Make sure that your [MRI data is compatible](../mri-data/t2-t1-model.md) with this model. For T1-weighted MRI only, use the **HyperASHS-PMC-T1** service and leave out the T2 image.
 
+!!! note
+    Use `itksnap-wt` from [ITK-SNAP 4.6](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4) or later, which can handle the hyper-resolution segmentations returned by HyperASHS.
+
 ## 1. Create an ITK-SNAP workspace
 
 We assume that your MRI scans are named `t2_oblique.nii` and `t1_wholebrain.nii` and that these files are in the current directory. Create a workspace containing these files and save it as `mywork.itksnap`:

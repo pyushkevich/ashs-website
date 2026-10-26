@@ -2,7 +2,7 @@
 
 ## Overview
 
-This page describes the MRI data requirements for the HyperASHS models that use both T2-weighted and T1-weighted MRI: `PMC_Atlas` and `HSG_Body_Atlas`. These models segment **hippocampal subfields** and the extrahippocampal **medial temporal lobe subregions** ERC, BA35, BA36 and PHC.
+This page describes the MRI data requirements for the HyperASHS models that use both T2-weighted and T1-weighted MRI: `PMC_Atlas` and `HSG_Body_Atlas` (which follows the [harmonized protocol of the Hippocampal Subfields Group](https://hippocampalsubfields.com/) for the hippocampal body). These models segment **hippocampal subfields** and the extrahippocampal **medial temporal lobe subregions** ERC, BA35, BA36 and PHC.
 
 This requires **high-resolution T2-weighted MRI** in which the layers of the hippocampus can be visually separated. A whole-brain T1-weighted MRI scan is also required. HyperASHS uses the T1w scan to locate the hippocampus, and also as a second input to the segmentation model, which helps along the thick-slice direction of the T2w scan.
 
@@ -37,7 +37,7 @@ Unlike ASHS Classic, HyperASHS registers the T1w scan to the T2w scan automatica
 
 ## Checking your data using ITK-SNAP
 
-We recommend using [ITK-SNAP](http://itksnap.org) to examine your scans before running HyperASHS.
+We recommend using [ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4) 4.6 or later to examine your scans before running HyperASHS.
 
 1. Load the T2-weighted MRI as the main image (`File->Open Main Image...`)
 2. Load the T1-weighted MRI as an additional image (`File->Add Another Image...`)

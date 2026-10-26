@@ -2,7 +2,7 @@
 
 HyperASHS is the new generation of ASHS. It segments hippocampal subfields and the subregions of the medial temporal lobe (MTL) cortex from 3T MRI, using a deep learning model trained on **isotropic, hyper-resolution** versions of the ASHS atlases.
 
-- Produces segmentations at nearly isotropic resolution (e.g., 0.4 × 0.4 × 0.4 mm³) from anisotropic T2-weighted MRI (e.g., 0.4 × 0.4 × 2.0 mm³). There are no "staircase" artifacts along the slice direction, so thickness and shape can be measured reliably.
+- Produces segmentations at nearly isotropic resolution (e.g., 0.4 × 0.4 × 0.4 mm³) from anisotropic T2-weighted MRI (e.g., 0.4 × 0.4 × 2.0 mm³). There are no "staircase" artifacts along the slice direction, so thickness and shape can be measured reliably, and the segmentations are well suited to surface-based modeling with [CRASHS](https://github.com/pyushkevich/crashs).
 - Uses both T2-weighted and T1-weighted MRI, or T1-weighted MRI alone.
 - The T2w + T1w and T1w-only models share a **unified segmentation protocol**, so results are consistent across the two kinds of data.
 - Runs [in the cloud](cloud/index.md) through ITK-SNAP, or locally: it is Python-based and installed with `pip install hyperresashs`. A segmentation takes about 3 minutes on a GPU.
@@ -23,7 +23,7 @@ HyperASHS is the new generation of ASHS. It segments hippocampal subfields and t
 
 ## How it works
 
-ASHS atlases are built from manual segmentations of T2-weighted MRI with thick slices. HyperASHS first turns each atlas subject into an isotropic training example. An *implicit neural representation* (INR) is fitted jointly to the subject's T2w MRI, T1w MRI and manual segmentation, and then sampled on a fine isotropic grid. An [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) model is then trained on these upsampled images. When you segment a new subject, the T1w and T2w scans are registered, cropped around each hippocampus and upsampled, and the trained model labels them directly at isotropic resolution.
+ASHS atlases are built from manual segmentations of T2-weighted MRI with thick slices. HyperASHS first turns each atlas subject into an isotropic training example. An *implicit neural representation* (INR) is fitted jointly to the subject's T2w MRI, T1w MRI and manual segmentation, and then sampled on a fine isotropic grid. An [nnU-Net](https://github.com/MIC-DKFZ/nnUNet) model is then trained on these upsampled images. When you segment a new subject, the neck is trimmed from the T1w scan, the T1w and T2w scans are registered to each other and to a template, regions of interest around each hippocampus are extracted and upsampled, and the trained model labels them directly at isotropic resolution.
 
 ```mermaid
 flowchart TB
@@ -33,7 +33,7 @@ flowchart TB
   end
   subgraph S["Segmentation: hrashs run"]
     direction LR
-    D["New subject:<br/>T2w + T1w MRI<br/>or T1w only"] --> E["Registration,<br/>MTL ROI<br/>extraction"] --> F["Isotropic<br/>nnU-Net<br/>inference"] --> G["Segmentations,<br/>volumes,<br/>QC images"]
+    D["New subject:<br/>T2w + T1w MRI<br/>or T1w only"] --> E["Neck trimming,<br/>registration,<br/>MTL ROI extraction"] --> F["Isotropic<br/>nnU-Net<br/>inference"] --> G["Segmentations,<br/>volumes,<br/>QC images"]
   end
   T -- "pre-trained model" --> S
 ```
@@ -46,7 +46,7 @@ In the [paper](../resources/citations.md#hyperashs) describing the method, thick
 |---|---|---|---|
 | `PMC_Atlas` | T2w (~0.4 × 0.4 × 2.0 mm³) + T1w (~1 mm³) | Hippocampal subfields, anterior MTL, amygdala, ERC, BA35, BA36, PHC | Older adults, neurodegenerative disease |
 | `PMC_T1_Atlas` | T1w only (~1 mm³) | Anterior/posterior hippocampus, amygdala, ERC, BA35, BA36, PHC | Older adults, neurodegenerative disease |
-| `HSG_Body_Atlas` | T2w + T1w | Hippocampal subfields in the hippocampal body (HSG harmonized protocol) | See `hrashs desc HSG_Body_Atlas` |
+| `HSG_Body_Atlas` | T2w + T1w | Hippocampal subfields in the hippocampal body ([HSG harmonized protocol](https://hippocampalsubfields.com/)) | See `hrashs desc HSG_Body_Atlas` |
 
 Run `hrashs list` to see the current list of models, and `hrashs desc <model_id>` for details. See the [Quick Start](quick-start.md) to choose one.
 

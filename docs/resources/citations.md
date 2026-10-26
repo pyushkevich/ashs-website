@@ -25,7 +25,7 @@ If you use HyperASHS, please cite:
 Each HyperASHS model also lists the papers describing its segmentation protocol. Run `hrashs desc <model_id>` to see them, and please cite them as well:
 
 - **PMC_Atlas and PMC_T1_Atlas:** Yushkevich et al., 2015 and Xie et al., 2019 (below), and Sadeghpour N., et al. Developing an anatomically valid segmentation protocol for anterior regions of the medial temporal lobe for neurodegenerative diseases. *Hippocampus* 35(5):e70027, 2025.
-- **HSG_Body_Atlas:** Daugherty A.M., Carr V., Canada K.L., et al. Harmonized Protocol for Subfield Segmentation in the Hippocampal Body on High-Resolution In Vivo MRI From the Hippocampal Subfields Group (HSG). *Hippocampus* 36(2):e70073, 2026. [doi:10.1002/hipo.70073](https://doi.org/10.1002/hipo.70073)
+- **HSG_Body_Atlas** ([HSG harmonized protocol](https://hippocampalsubfields.com/)): Daugherty A.M., Carr V., Canada K.L., et al. Harmonized Protocol for Subfield Segmentation in the Hippocampal Body on High-Resolution In Vivo MRI From the Hippocampal Subfields Group (HSG). *Hippocampus* 36(2):e70073, 2026. [doi:10.1002/hipo.70073](https://doi.org/10.1002/hipo.70073)
 
 ## ASHS Classic
 

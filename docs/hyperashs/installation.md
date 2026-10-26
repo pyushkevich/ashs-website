@@ -112,4 +112,4 @@ hrashs check
 
 ## Install ITK-SNAP
 
-We also recommend installing [ITK-SNAP](http://itksnap.org/), which can be used to view your images and the segmentation results. The instructions in this documentation assume that ITK-SNAP can be run from the command line by typing `itksnap`.
+We also recommend installing [ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4) **4.6 or later**, which can be used to view your images and the segmentation results. Earlier versions cannot display the HyperASHS hyper-resolution segmentations over the original MRI, because these segmentations are in a different voxel space from the image. The instructions in this documentation assume that ITK-SNAP can be run from the command line by typing `itksnap`.

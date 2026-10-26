@@ -241,3 +241,7 @@
 @media screen and (max-width: 59.9375em) {
   .md-typeset .gs-two-col { grid-template-columns: 1fr; }
 }
+
+/* Center Mermaid diagrams */
+.md-typeset .mermaid { text-align: center; }
+.md-typeset .mermaid svg { display: block; margin: 0 auto; }

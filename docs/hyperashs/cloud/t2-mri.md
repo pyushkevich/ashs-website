@@ -1,9 +1,9 @@
 # Cloud HyperASHS Tutorial: T2-MRI
 
-This tutorial uses the **HyperASHS-PMC** service. Make sure that your [MRI data is compatible](../mri-data/t2-t1-model.md) with this model. The procedure is the same for the **HyperASHS-HSG-Body** service.
+This tutorial uses the **HyperASHS-PMC** service. Make sure that your [MRI data is compatible](../mri-data/t2-t1-model.md) with this model. The procedure is the same for the **HyperASHS-HSG-Body** service, which follows the [harmonized hippocampal body protocol of the Hippocampal Subfields Group](https://hippocampalsubfields.com/).
 
-!!! note
-    To use this service, you need [ITK-SNAP](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP3) 3.8 or later.
+!!! note "ITK-SNAP 4.6 or later is required"
+    HyperASHS returns segmentations at a finer resolution than the input MRI, i.e., in a different voxel space from the main image. Only [ITK-SNAP 4.6](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4) and later can work with such segmentations, so older versions of ITK-SNAP cannot be used with Cloud HyperASHS.
 
 ## 1. Create an ITK-SNAP workspace
 

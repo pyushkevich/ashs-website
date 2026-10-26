@@ -124,13 +124,21 @@ The results should look something like this:
 <figcaption>HyperASHS segmentation of the left MTL in the space of the T2-weighted MRI, viewed in ITK-SNAP.</figcaption>
 </figure>
 
-To view the hyper-resolution segmentation, open it as the main segmentation over the T2-weighted MRI patch of the same side, which is placed in the working directory:
+To view the hyper-resolution segmentation, you can open it over the upsampled T2-weighted MRI patch of the same side, which is placed in the working directory:
 
 ```bash
 itksnap -g output/sub01/sub01_tse_patch_hyperres_left.nii.gz \
     -s output/sub01/final/sub01_tse_patch_hyperres_seg_left.nii.gz \
     -l output/sub01/final/sub01_itksnap_labels.txt
 ```
+
+[ITK-SNAP 4.6](http://www.itksnap.org/pmwiki/pmwiki.php?n=Downloads.SNAP4) and later can also display a segmentation whose voxel space differs from the main image, so you can view the hyper-resolution segmentation directly over the original T2-weighted MRI.
+
+## Surface-based modeling with CRASHS
+
+[CRASHS](https://github.com/pyushkevich/crashs) (Cortical Reconstruction for ASHS) fits a template surface mesh of the MTL cortex to an ASHS segmentation. This gives a point-by-point correspondence across subjects, so that measures such as cortical thickness can be mapped and compared along the cortex rather than averaged over whole subregions.
+
+Surface-based modeling depends on how well the segmentation captures the shape of the structures. With ASHS Classic, segmentations of anisotropic T2-weighted MRI (e.g., 2 mm slices) have step edges along the slice direction, and surfaces and thickness measurements derived from them inherit these artifacts. The HyperASHS hyper-resolution segmentations are nearly isotropic and smooth in all directions, which makes them a much better input for CRASHS. Use the `*_tse_patch_hyperres_seg_*` images (not the native-space segmentations) as CRASHS input; see the [CRASHS documentation](https://github.com/pyushkevich/crashs) for instructions.
 
 ## Registration options
 
