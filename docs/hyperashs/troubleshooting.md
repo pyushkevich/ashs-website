@@ -9,7 +9,7 @@ HyperASHS requires PyTorch 2.5.x. Install the PyTorch build that matches your CU
 HyperASHS is probably running on the CPU. Check that `nvidia-smi` lists your GPU and that `hrashs check` finds CUDA. You can force the GPU with `--device cuda`.
 
 **Models cannot be downloaded from Hugging Face (SSL errors).**
-If you are behind a corporate or institutional proxy, try the `-k` option to disable SSL verification.
+If you are behind a corporate or institutional proxy, add the `-k` option to the `hrashs` command to disable SSL verification (see [SSL certificate errors](../resources/troubleshooting.md#ssl-certificate-errors-when-downloading-models)).
 
 ## Results
 
