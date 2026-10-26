@@ -1,5 +1,8 @@
 # HyperASHS: Installation
 
+!!! tip
+    The easiest way to try out HyperASHS is to [run it in the cloud](cloud/index.md).
+
 ## Requirements
 
 - **Linux** with an **NVIDIA GPU** is strongly recommended. Inference can run on the CPU, but takes over an hour per subject, compared with about 3 minutes on a GPU. [Training](training.md) requires a GPU.

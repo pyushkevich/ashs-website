@@ -12,7 +12,7 @@ hide:
 
 ## What's new in 2026? HyperASHS!
 
-HyperASHS is an all-new version of ASHS. It does much more than the original: it produces **isotropic-resolution** segmentations, it's **Python-based** and runs on a single GPU workstation, and its T2w + T1w and T1w-only models use a **unified protocol**. HyperASHS is described in our new paper in *NeuroImage*: [Li et al., 2026](https://doi.org/10.1016/j.neuroimage.2026.122294).
+HyperASHS is an all-new version of ASHS. It does much more than the original: it produces **isotropic-resolution** segmentations, it runs **in the cloud** through ITK-SNAP or locally on a GPU workstation, and its T2w + T1w and T1w-only models use a **unified protocol**. HyperASHS is described in our new paper in *NeuroImage*: [Li et al., 2026](https://doi.org/10.1016/j.neuroimage.2026.122294).
 
 [Get started with HyperASHS](hyperashs/quick-start.md){ .md-button .md-button--primary }
 [ASHS Classic documentation](ashs/index.md){ .md-button }
@@ -28,7 +28,7 @@ ASHS is software for automatic segmentation of the medial temporal lobe (MTL) su
 
 ## Which version should I use?
 
-**[HyperASHS](hyperashs/index.md)** (recommended) uses deep learning (nnU-Net) trained on isotropic, upsampled atlases. It produces segmentations at ~0.4 mm isotropic resolution and takes about 3 minutes per subject on an NVIDIA GPU. Install it with `pip install hyperresashs`.
+**[HyperASHS](hyperashs/index.md)** (recommended) uses deep learning (nnU-Net) trained on isotropic, upsampled atlases. It produces segmentations at ~0.4 mm isotropic resolution and takes about 3 minutes per subject on an NVIDIA GPU. It runs in the cloud through ITK-SNAP, or locally after `pip install hyperresashs`.
 
 **[ASHS Classic](ashs/index.md)** uses multi-atlas segmentation with joint label fusion. Its segmentations have the resolution of the T2w MRI. It runs in the cloud through ITK-SNAP, or locally on Linux and MacOS, and has been used in many published studies and in ADNI.
 

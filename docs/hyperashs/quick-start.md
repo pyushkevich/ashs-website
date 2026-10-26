@@ -71,9 +71,17 @@ Check that your data meet the requirements for the model you choose:
 - [PMC_Atlas (T2w + T1w) model](mri-data/t2-t1-model.md)
 - [PMC_T1_Atlas (T1w only) model](mri-data/t1-model.md)
 
-## 3. Install and run HyperASHS
+## 3. Choose how to run HyperASHS
 
-HyperASHS runs on your own computer. A Linux computer with an NVIDIA GPU is strongly recommended. A segmentation takes about 3 minutes on a GPU, but over an hour on a CPU.
+You can run HyperASHS in two ways:
+
+- By sending your data to a cloud-based server that runs HyperASHS for you (the easy way)
+    - [Preliminary steps](cloud/index.md)
+    - [Instructions for the T2w + T1w models](cloud/t2-mri.md) (HyperASHS-PMC and HyperASHS-HSG-Body services)
+    - [Instructions for the T1w-only model](cloud/t1-mri.md) (HyperASHS-PMC-T1 service)
+- By installing HyperASHS on your own computer (best for large studies and for training your own model). A Linux computer with an NVIDIA GPU is strongly recommended. A segmentation takes about 3 minutes on a GPU, but over an hour on a CPU.
+
+To run HyperASHS locally:
 
 1. [Install HyperASHS](installation.md):
 
@@ -91,5 +99,3 @@ HyperASHS runs on your own computer. A Linux computer with an NVIDIA GPU is stro
     # T1w MRI only
     hrashs run -a PMC_T1_Atlas -g t1.nii.gz -I sub01 -w ./sub01
     ```
-
-There is no cloud service for HyperASHS yet. If you do not have access to a GPU, you can still use [Cloud ASHS](../ashs/cloud/index.md) with the classic ASHS atlases.

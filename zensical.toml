@@ -17,7 +17,14 @@ nav = [
       { "T2w + T1w Model Requirements" = "hyperashs/mri-data/t2-t1-model.md" },
       { "T1w-Only Model Requirements" = "hyperashs/mri-data/t1-model.md" },
     ] },
-    { "Using HyperASHS" = [
+    { "Cloud HyperASHS" = [
+      "hyperashs/cloud/index.md",
+      { "Cloud HyperASHS for T2-MRI" = "hyperashs/cloud/t2-mri.md" },
+      { "Cloud HyperASHS for T1-MRI" = "hyperashs/cloud/t1-mri.md" },
+      { "Command-Line Tutorial" = "hyperashs/cloud/command-line.md" },
+      { "Troubleshooting" = "hyperashs/cloud/troubleshooting.md" },
+    ] },
+    { "Local HyperASHS" = [
       { "Installation" = "hyperashs/installation.md" },
       { "Basic Usage" = "hyperashs/usage.md" },
       { "Training a Model" = "hyperashs/training.md" },
@@ -69,6 +76,11 @@ nav = [
 "hyperashs/usage/" = "ashs/local/usage/"
 "hyperashs/training/" = "ashs/local/atlas-t2/"
 "hyperashs/troubleshooting/" = "ashs/local/troubleshooting/"
+"hyperashs/cloud/" = "ashs/cloud/"
+"hyperashs/cloud/t2-mri/" = "ashs/cloud/t2-mri/"
+"hyperashs/cloud/t1-mri/" = "ashs/cloud/t1-mri/"
+"hyperashs/cloud/command-line/" = "ashs/cloud/command-line/"
+"hyperashs/cloud/troubleshooting/" = "ashs/cloud/troubleshooting/"
 "ashs/" = "hyperashs/"
 "ashs/quick-start/" = "hyperashs/quick-start/"
 "ashs/mri-data/" = "hyperashs/mri-data/"
@@ -80,7 +92,11 @@ nav = [
 "ashs/local/atlas-t2/" = "hyperashs/training/"
 "ashs/local/atlas-t1/" = "hyperashs/training/"
 "ashs/local/troubleshooting/" = "hyperashs/troubleshooting/"
-"ashs/cloud/troubleshooting/" = "hyperashs/troubleshooting/"
+"ashs/cloud/" = "hyperashs/cloud/"
+"ashs/cloud/t2-mri/" = "hyperashs/cloud/t2-mri/"
+"ashs/cloud/t1-mri/" = "hyperashs/cloud/t1-mri/"
+"ashs/cloud/command-line/" = "hyperashs/cloud/command-line/"
+"ashs/cloud/troubleshooting/" = "hyperashs/cloud/troubleshooting/"
 
 [project.theme]
 custom_dir = "overrides"

@@ -5,7 +5,7 @@ HyperASHS is the new generation of ASHS. It segments hippocampal subfields and t
 - Produces segmentations at nearly isotropic resolution (e.g., 0.4 × 0.4 × 0.4 mm³) from anisotropic T2-weighted MRI (e.g., 0.4 × 0.4 × 2.0 mm³). There are no "staircase" artifacts along the slice direction, so thickness and shape can be measured reliably.
 - Uses both T2-weighted and T1-weighted MRI, or T1-weighted MRI alone.
 - The T2w + T1w and T1w-only models share a **unified segmentation protocol**, so results are consistent across the two kinds of data.
-- Python-based and installed with `pip install hyperresashs`. A segmentation takes about 3 minutes on a GPU.
+- Runs [in the cloud](cloud/index.md) through ITK-SNAP, or locally: it is Python-based and installed with `pip install hyperresashs`. A segmentation takes about 3 minutes on a GPU.
 - Pre-trained models are downloaded automatically from Hugging Face.
 - Can be [retrained](training.md) on your own manual segmentations.
 - Free and open-source.
@@ -57,6 +57,10 @@ Run `hrashs list` to see the current list of models, and `hrashs desc <model_id>
 -   **[Quick Start](quick-start.md)**
 
     Pick a model, check your MRI data and run your first segmentation.
+
+-   **[Cloud HyperASHS](cloud/index.md)**
+
+    Send your scans to our server from ITK-SNAP. No installation needed.
 
 -   **[Installation](installation.md)**
 
