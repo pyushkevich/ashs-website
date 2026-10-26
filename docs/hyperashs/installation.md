@@ -7,7 +7,7 @@
 
 - **Linux** with an **NVIDIA GPU** is strongly recommended. Inference can run on the CPU, but takes over an hour per subject, compared with about 3 minutes on a GPU. [Training](training.md) requires a GPU.
 - **Python 3.10** or later. We recommend installing HyperASHS in its own [conda](https://docs.conda.io/) environment or Python virtual environment.
-- An internet connection the first time you use a model, so that it can be downloaded from [Hugging Face](https://huggingface.co/upennpatchlab).
+- An internet connection the first time you use a model, so that it can be downloaded from [Hugging Face](https://huggingface.co/upennpatchlab). This happens automatically; see [Models and Atlases](../resources/models-and-atlases.md) for the list of repositories.
 
 Unlike ASHS Classic, HyperASHS does not need a computing cluster. Registration and image processing tools ([Greedy](https://sites.google.com/view/greedyreg/home) and [Convert3D](http://itksnap.org/c3d)) are installed automatically as Python packages.
 

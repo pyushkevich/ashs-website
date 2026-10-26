@@ -50,13 +50,13 @@ ASHS atlas packages are required to perform segmentation. Different atlas packag
 
 - The *ASHS UPENN PMC* atlas package (2014 paper), developed in collaboration with Dr. David A. Wolk at the University of Pennsylvania (Penn) Memory Center. It labels subfields along the entire length of the hippocampal formation and includes several cortical regions (PRC/ERC). This atlas package is suitable for labeling **older adult** brains in **3 Tesla** MRI.
 
-Several additional atlases are available (7T older adults, 3T younger adults, 3T older adults hippocampal body only, and 3T older adults for T1-weighted MRI), but some only work with older ASHS versions. [Write to us](../../resources/mailing-list.md) if you need them.
+Several additional atlases are available (7T older adults, 3T younger adults, 3T older adults hippocampal body only, and 3T older adults for T1-weighted MRI), and are listed on the [Models and Atlases](../../resources/models-and-atlases.md#ashs-classic-atlas-packages) page. Some only work with older ASHS versions.
 
 Some users may prefer to build their own atlas package instead of using one of the packages that we provide. See [Building an Atlas for T2-MRI](atlas-t2.md) or [Building an Atlas for T1-MRI](atlas-t1.md) for details.
 
 To use an existing atlas package:
 
-1. Download the desired atlas package from [NITRC](http://www.nitrc.org/frs/?group_id=370) to a directory of your choice.
+1. Download the desired atlas package from [Hugging Face](https://huggingface.co/datasets/upennpatchlab/ashs_atlases/tree/main) or [NITRC](http://www.nitrc.org/frs/?group_id=370) to a directory of your choice. See [Models and Atlases](../../resources/models-and-atlases.md#ashs-classic-atlas-packages) for the list of packages.
 
 2. Uncompress the atlas package:
 

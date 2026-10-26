@@ -58,6 +58,7 @@ nav = [
   { "Resources" = [
     "resources/index.md",
     { "Citations" = "resources/citations.md" },
+    { "Models and Atlases" = "resources/models-and-atlases.md" },
     { "Related Projects" = "resources/related-projects.md" },
     { "Mailing List" = "resources/mailing-list.md" },
   ] },

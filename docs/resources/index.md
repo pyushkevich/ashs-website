@@ -1,6 +1,7 @@
 # Resources
 
 - [Citations](citations.md): papers to cite when you use HyperASHS or ASHS Classic.
+- [Models and Atlases](models-and-atlases.md): where the HyperASHS models and ASHS Classic atlas packages are hosted on Hugging Face.
 - [Related Projects](related-projects.md): software and projects related to ASHS.
 - [Mailing List and Support](mailing-list.md): getting help and keeping up with updates.
 
