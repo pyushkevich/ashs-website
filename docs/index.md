@@ -36,7 +36,7 @@ Use the **HyperASHS / ASHS Classic** switch at the top of every page to move bet
 
 ## About us
 
-ASHS and HyperASHS are developed by members of the [Penn Image Computing and Science Laboratory (PICSL)](https://picsl.upenn.edu/) in the Department of Radiology at the University of Pennsylvania. Please see [Citations](resources/citations.md) for the papers to cite, and join the [mailing list](resources/mailing-list.md) for updates and help.
+ASHS and HyperASHS are developed by the [PATCH Lab](https://patchlab.pennbrain.upenn.edu/) (Penn ADRD Trajectories, Copathology, and Heterogeneity Lab) and the [Penn Image Computing and Science Laboratory (PICSL)](https://picsl.upenn.edu/) at the University of Pennsylvania. Please see [Citations](resources/citations.md) for the papers to cite, and join the [mailing list](resources/mailing-list.md) for updates and help.
 
 ## Funding
 
