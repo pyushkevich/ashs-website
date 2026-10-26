@@ -61,6 +61,7 @@ nav = [
     { "Models and Atlases" = "resources/models-and-atlases.md" },
     { "Related Projects" = "resources/related-projects.md" },
     { "Source Code" = "resources/source-code.md" },
+    { "Contributors" = "resources/contributors.md" },
     { "Troubleshooting" = "resources/troubleshooting.md" },
     { "Mailing List" = "resources/mailing-list.md" },
   ] },
