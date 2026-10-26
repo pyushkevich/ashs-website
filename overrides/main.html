@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{#- Page-title banner below the header, as on the old Google Site. A page can
+    set `banner` and `banner_subtitle` in its front matter to override it. -#}
+{% block hero %}
+  {% set meta = page.meta or {} %}
+  <section class="gs-banner{% if page.is_homepage %} gs-banner--home{% endif %}">
+    <div class="gs-banner__inner md-grid">
+      <h1 class="gs-banner__title">{{ meta.banner or page.title }}</h1>
+      {% if meta.banner_subtitle %}
+        <p class="gs-banner__subtitle">{{ meta.banner_subtitle }}</p>
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}

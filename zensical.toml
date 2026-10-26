@@ -1,5 +1,5 @@
 [project]
-site_name = "ASHS"
+site_name = "ASHS Documentation"
 site_description = "Automatic Segmentation of Hippocampal Subfields: HyperASHS and classic ASHS"
 site_url = "https://pyushkevich.github.io/ashs-website/"
 repo_url = "https://github.com/pyushkevich/HyperResASHS"
@@ -17,10 +17,12 @@ nav = [
       { "T2w + T1w Model Requirements" = "hyperashs/mri-data/t2-t1-model.md" },
       { "T1w-Only Model Requirements" = "hyperashs/mri-data/t1-model.md" },
     ] },
-    { "Installation" = "hyperashs/installation.md" },
-    { "Basic Usage" = "hyperashs/usage.md" },
-    { "Training a Model" = "hyperashs/training.md" },
-    { "Troubleshooting" = "hyperashs/troubleshooting.md" },
+    { "Using HyperASHS" = [
+      { "Installation" = "hyperashs/installation.md" },
+      { "Basic Usage" = "hyperashs/usage.md" },
+      { "Training a Model" = "hyperashs/training.md" },
+      { "Troubleshooting" = "hyperashs/troubleshooting.md" },
+    ] },
   ] },
   { "ASHS Classic" = [
     "ashs/index.md",
@@ -85,13 +87,13 @@ custom_dir = "overrides"
 language = "en"
 favicon = "assets/images/logo.svg"
 icon.logo = "lucide/brain"
+font.text = "Lato"
 features = [
   "content.code.copy",
   "content.tooltips",
   "navigation.footer",
   "navigation.indexes",
   "navigation.sections",
-  "navigation.tabs",
   "navigation.top",
   "navigation.tracking",
   "search.highlight",

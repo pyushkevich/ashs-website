@@ -1,38 +1,16 @@
-{#- Copy of the theme header with the HyperASHS / ASHS Classic toggle added -#}
-{% set class = "md-header" %}
-{% if "navigation.tabs.sticky" in features %}
-  {% set class = class ~ " md-header--shadow md-header--lifted" %}
-{% elif "navigation.tabs" not in features %}
-  {% set class = class ~ " md-header--shadow" %}
-{% endif %}
-<header class="{{ class }}" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
-    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
-      {% include "partials/logo.html" %}
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
+{#- Dark header with a horizontal main menu, in the style of the old Google
+    Site. The full navigation is still available in the drawer on small screens. -#}
+<header class="md-header gs-header" data-md-component="header">
+  <nav class="md-header__inner md-grid gs-header__inner" aria-label="{{ lang.t('header') }}">
+    <label class="md-header__button md-icon gs-header__drawer" for="__drawer">
       {% set icon = config.theme.icon.menu or "material/menu" %}
       {% include ".icons/" ~ icon ~ ".svg" %}
       <span class="md-visually-hidden">{{ lang.t('nav') }}</span>
     </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            {{ config.site_name }}
-          </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            {% if page.meta and page.meta.title %}
-              {{ page.meta.title }}
-            {% else %}
-              {{ page.title }}
-            {% endif %}
-          </span>
-        </div>
-      </div>
-    </div>
+    <a href="{{ nav.homepage.url | url }}" class="gs-brand" title="{{ config.site_name | e }}">
+      {{ config.site_name }}
+    </a>
+    {% include "partials/topnav.html" %}
     {% include "partials/version-toggle.html" %}
     {% if config.theme.palette %}
       {% if not config.theme.palette is mapping %}
@@ -41,9 +19,6 @@
     {% endif %}
     {% if not config.theme.palette is mapping %}
       {% include "partials/javascripts/palette.html" %}
-    {% endif %}
-    {% if config.extra.alternate %}
-      {% include "partials/alternate.html" %}
     {% endif %}
     {% if "search" in config.plugins %}
       {% set search = config.plugins["search"] | attr("config") %}
@@ -56,15 +31,5 @@
         {% include "partials/search.html" %}
       {% endif %}
     {% endif %}
-    <div class="md-header__source">
-      {% if config.repo_url %}
-        {% include "partials/source.html" %}
-      {% endif %}
-    </div>
   </nav>
-  {% if "navigation.tabs.sticky" in features %}
-    {% if "navigation.tabs" in features %}
-      {% include "partials/tabs.html" %}
-    {% endif %}
-  {% endif %}
 </header>

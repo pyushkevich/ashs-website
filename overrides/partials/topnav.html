@@ -1,0 +1,49 @@
+{#- Horizontal main menu in the style of the old Google Site. It shows Home,
+    the pages of the active version (HyperASHS or ASHS Classic, chosen with
+    the toggle) and Resources. Sections become dropdown menus. -#}
+{% set _ = namespace(version = none, hyper = none, resources = none) %}
+{% for item in nav.items %}
+  {% if item.title == "HyperASHS" %}{% set _.hyper = item %}{% endif %}
+  {% if item.title == "Resources" %}{% set _.resources = item %}{% endif %}
+  {% if item.children and item.active and item.title in ["HyperASHS", "ASHS Classic"] %}
+    {% set _.version = item %}
+  {% endif %}
+{% endfor %}
+{% set version = _.version or _.hyper %}
+
+{% macro first_url(section) -%}
+  {%- set f = namespace(url = none) -%}
+  {%- for c in section.children -%}
+    {%- if f.url is none and not c.children -%}{%- set f.url = c.url -%}{%- endif -%}
+  {%- endfor -%}
+  {{- f.url -}}
+{%- endmacro %}
+
+{% macro menu_entry(item, label) %}
+  {% if item.children %}
+    <li class="gs-menu__item gs-menu__item--drop{% if item.active %} gs-menu__item--active{% endif %}">
+      <a class="gs-menu__link" href="{{ first_url(item) | url }}">{{ label or item.title }}<svg class="gs-menu__caret" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 10l5 5 5-5z"/></svg></a>
+      <ul class="gs-menu__drop">
+        {% for c in item.children %}
+          {% if not c.children %}
+            <li><a class="gs-menu__droplink{% if c.active %} gs-menu__droplink--active{% endif %}" href="{{ c.url | url }}">{{ "Overview" if c.is_index else c.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>
+  {% else %}
+    <li class="gs-menu__item{% if item.active %} gs-menu__item--active{% endif %}">
+      <a class="gs-menu__link" href="{{ item.url | url }}">{{ label or item.title }}</a>
+    </li>
+  {% endif %}
+{% endmacro %}
+
+<ul class="gs-menu">
+  {{ menu_entry(nav.items | first, "Home") }}
+  {% if version %}
+    {% for c in version.children %}
+      {{ menu_entry(c, "Overview" if c.is_index else none) }}
+    {% endfor %}
+  {% endif %}
+  {% if _.resources %}{{ menu_entry(_.resources) }}{% endif %}
+</ul>

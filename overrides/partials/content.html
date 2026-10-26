@@ -11,7 +11,7 @@
     isotropic-resolution segmentations of the same structures and runs on a single GPU workstation.</p>
   </div>
 {% endif %}
-{% if "<h1" not in page.content %}
+{% if "<h1" not in page.content and not (page.meta and page.meta.banner) %}
   <h1>{{ page.title | d(config.site_name, true)}}</h1>
 {% endif %}
 {{ page.content }}
