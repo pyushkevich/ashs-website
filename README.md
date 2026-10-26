@@ -1,6 +1,6 @@
 # ASHS / HyperASHS website
 
-Source for the ASHS and HyperASHS documentation website, built with [Zensical](https://zensical.org) and published to GitHub Pages at <https://pyushkevich.github.io/ashs-website/>.
+Source for the ASHS and HyperASHS documentation website, built with [Zensical](https://zensical.org) and published to GitHub Pages at <https://ashs.itksnap.org/> (custom domain; DNS has a CNAME from `ashs.itksnap.org` to `pyushkevich.github.io`).
 
 ## Editing
 
@@ -21,7 +21,7 @@ python -m venv .venv
 .venv/bin/zensical serve
 ```
 
-Then open <http://localhost:8000/ashs-website/>.
+Then open <http://localhost:8000/>.
 
 ## Publishing
 

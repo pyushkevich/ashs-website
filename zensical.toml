@@ -1,7 +1,7 @@
 [project]
 site_name = "ASHS Documentation"
 site_description = "Automatic Segmentation of Hippocampal Subfields: HyperASHS and classic ASHS"
-site_url = "https://pyushkevich.github.io/ashs-website/"
+site_url = "https://ashs.itksnap.org/"
 repo_url = "https://github.com/pyushkevich/HyperResASHS"
 repo_name = "HyperResASHS"
 copyright = "Penn Image Computing and Science Laboratory (PICSL), University of Pennsylvania"
