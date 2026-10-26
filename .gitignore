@@ -1,0 +1,6 @@
+.venv/
+site/
+.cache/
+.DS_Store
+# Elsevier-copyrighted PDF; link to the DOI instead
+paper/

@@ -1,0 +1,23 @@
+{#- Segmented control that switches between the HyperASHS and ASHS Classic
+    sections, going to the parallel page when there is one
+    (config.extra.counterparts) and to the section landing page otherwise. -#}
+{% set u = page.url if page and page.url else "" %}
+{% set cmap = config.extra.counterparts or {} %}
+{% set cp = cmap[u] if u in cmap else none %}
+{% if u[:10] == "hyperashs/" %}
+  {% set hyper_href = u %}
+  {% set ashs_href = cp or "ashs/" %}
+  {% set active = "hyper" %}
+{% elif u[:5] == "ashs/" %}
+  {% set hyper_href = cp or "hyperashs/" %}
+  {% set ashs_href = u %}
+  {% set active = "ashs" %}
+{% else %}
+  {% set hyper_href = "hyperashs/" %}
+  {% set ashs_href = "ashs/" %}
+  {% set active = "" %}
+{% endif %}
+<div class="vt" role="group" aria-label="Software version">
+  <a class="vt__opt{% if active == 'hyper' %} vt__opt--on{% endif %}" href="{{ hyper_href | url }}"{% if active == 'hyper' %} aria-current="true"{% endif %}>HyperASHS</a>
+  <a class="vt__opt{% if active == 'ashs' %} vt__opt--on{% endif %}" href="{{ ashs_href | url }}"{% if active == 'ashs' %} aria-current="true"{% endif %}>ASHS<span class="vt__long">&nbsp;Classic</span></a>
+</div>

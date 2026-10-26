@@ -1,0 +1,141 @@
+[project]
+site_name = "ASHS"
+site_description = "Automatic Segmentation of Hippocampal Subfields: HyperASHS and classic ASHS"
+site_url = "https://pyushkevich.github.io/ashs-website/"
+repo_url = "https://github.com/pyushkevich/HyperResASHS"
+repo_name = "HyperResASHS"
+copyright = "Penn Image Computing and Science Laboratory (PICSL), University of Pennsylvania"
+extra_css = ["assets/css/extra.css"]
+
+nav = [
+  { "Home" = "index.md" },
+  { "HyperASHS" = [
+    "hyperashs/index.md",
+    { "Quick Start" = "hyperashs/quick-start.md" },
+    { "MRI Data" = [
+      "hyperashs/mri-data/index.md",
+      { "T2w + T1w Model Requirements" = "hyperashs/mri-data/t2-t1-model.md" },
+      { "T1w-Only Model Requirements" = "hyperashs/mri-data/t1-model.md" },
+    ] },
+    { "Installation" = "hyperashs/installation.md" },
+    { "Basic Usage" = "hyperashs/usage.md" },
+    { "Training a Model" = "hyperashs/training.md" },
+    { "Troubleshooting" = "hyperashs/troubleshooting.md" },
+  ] },
+  { "ASHS Classic" = [
+    "ashs/index.md",
+    { "Quick Start" = "ashs/quick-start.md" },
+    { "MRI Data" = [
+      "ashs/mri-data/index.md",
+      { "ASHS-PMC Atlas Requirements" = "ashs/mri-data/pmc-atlas.md" },
+      { "ASHS-PMC-T1 Atlas Requirements" = "ashs/mri-data/pmc-t1-atlas.md" },
+      { "ADNI3 Data" = "ashs/mri-data/adni3.md" },
+    ] },
+    { "Cloud ASHS" = [
+      "ashs/cloud/index.md",
+      { "Cloud ASHS for T2-MRI" = "ashs/cloud/t2-mri.md" },
+      { "Cloud ASHS for T1-MRI" = "ashs/cloud/t1-mri.md" },
+      { "Command-Line Tutorial" = "ashs/cloud/command-line.md" },
+      { "Troubleshooting" = "ashs/cloud/troubleshooting.md" },
+    ] },
+    { "Local ASHS" = [
+      { "Installation" = "ashs/local/installation.md" },
+      { "Basic Usage" = "ashs/local/usage.md" },
+      { "Building an Atlas for T2-MRI" = "ashs/local/atlas-t2.md" },
+      { "Building an Atlas for T1-MRI" = "ashs/local/atlas-t1.md" },
+      { "Troubleshooting" = "ashs/local/troubleshooting.md" },
+    ] },
+  ] },
+  { "Resources" = [
+    "resources/index.md",
+    { "Citations" = "resources/citations.md" },
+    { "Related Projects" = "resources/related-projects.md" },
+    { "Mailing List" = "resources/mailing-list.md" },
+  ] },
+]
+
+# Parallel pages for the HyperASHS <-> ASHS Classic toggle (see overrides/).
+# Keys and values are page URLs. Pages not listed fall back to the other
+# section's landing page.
+[project.extra.counterparts]
+"hyperashs/" = "ashs/"
+"hyperashs/quick-start/" = "ashs/quick-start/"
+"hyperashs/mri-data/" = "ashs/mri-data/"
+"hyperashs/mri-data/t2-t1-model/" = "ashs/mri-data/pmc-atlas/"
+"hyperashs/mri-data/t1-model/" = "ashs/mri-data/pmc-t1-atlas/"
+"hyperashs/installation/" = "ashs/local/installation/"
+"hyperashs/usage/" = "ashs/local/usage/"
+"hyperashs/training/" = "ashs/local/atlas-t2/"
+"hyperashs/troubleshooting/" = "ashs/local/troubleshooting/"
+"ashs/" = "hyperashs/"
+"ashs/quick-start/" = "hyperashs/quick-start/"
+"ashs/mri-data/" = "hyperashs/mri-data/"
+"ashs/mri-data/pmc-atlas/" = "hyperashs/mri-data/t2-t1-model/"
+"ashs/mri-data/pmc-t1-atlas/" = "hyperashs/mri-data/t1-model/"
+"ashs/mri-data/adni3/" = "hyperashs/mri-data/"
+"ashs/local/installation/" = "hyperashs/installation/"
+"ashs/local/usage/" = "hyperashs/usage/"
+"ashs/local/atlas-t2/" = "hyperashs/training/"
+"ashs/local/atlas-t1/" = "hyperashs/training/"
+"ashs/local/troubleshooting/" = "hyperashs/troubleshooting/"
+"ashs/cloud/troubleshooting/" = "hyperashs/troubleshooting/"
+
+[project.theme]
+custom_dir = "overrides"
+language = "en"
+favicon = "assets/images/logo.svg"
+icon.logo = "lucide/brain"
+features = [
+  "content.code.copy",
+  "content.tooltips",
+  "navigation.footer",
+  "navigation.indexes",
+  "navigation.sections",
+  "navigation.tabs",
+  "navigation.top",
+  "navigation.tracking",
+  "search.highlight",
+  "toc.follow",
+]
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme)"
+toggle.icon = "lucide/sun-moon"
+toggle.name = "Switch to light mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: light)"
+scheme = "default"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
+
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "indigo"
+accent = "indigo"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to system preference"
+
+[project.markdown_extensions]
+abbr = {}
+admonition = {}
+attr_list = {}
+def_list = {}
+footnotes = {}
+md_in_html = {}
+tables = {}
+toc.permalink = true
+pymdownx.betterem = {}
+pymdownx.details = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.inlinehilite = {}
+pymdownx.keys = {}
+pymdownx.magiclink = {}
+pymdownx.smartsymbols = {}
+pymdownx.superfences.custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+]
+pymdownx.tabbed.alternate_style = true

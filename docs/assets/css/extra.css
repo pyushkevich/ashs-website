@@ -1,0 +1,75 @@
+/* HyperASHS / ASHS Classic toggle in the header */
+.vt {
+  display: flex;
+  flex-shrink: 0;
+  margin: 0 0.6rem;
+  padding: 0.15rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 1rem;
+  background: var(--md-default-fg-color--lightest);
+  font-size: 0.65rem;
+  font-weight: 700;
+  line-height: 1.2rem;
+}
+.vt__opt {
+  padding: 0.1rem 0.7rem;
+  border-radius: 0.9rem;
+  color: var(--md-default-fg-color--light) !important;
+  white-space: nowrap;
+  transition: color 125ms, background-color 125ms;
+}
+.vt__opt:hover { color: var(--md-default-fg-color) !important; }
+.vt__opt--on,
+.vt__opt--on:hover {
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color) !important;
+}
+@media screen and (max-width: 44.9375em) {
+  .vt__long { display: none; }
+  .vt__opt { padding: 0.1rem 0.45rem; }
+}
+
+/* Link to the parallel page at the bottom of HyperASHS / ASHS pages */
+.vt-other {
+  margin-top: 2.5rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+  color: var(--md-default-fg-color--light);
+  font-size: 0.7rem;
+}
+
+/* Figures: images side by side with captions */
+.md-typeset .fig-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.8rem;
+  margin: 1em 0;
+}
+.md-typeset .fig-row figure { margin: 0; }
+.md-typeset figure img { border-radius: 0.2rem; }
+.md-typeset figcaption {
+  max-width: none;
+  font-size: 0.7rem;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .fig-narrow img { max-width: 28rem; width: 100%; }
+
+/* Landing page */
+.md-typeset .hero {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.md-typeset .hero > * { min-width: 0; }
+.md-typeset .hero h1 { margin-bottom: 0.4rem; }
+.md-typeset .hero .tagline {
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color--light);
+}
+.md-typeset .hero img { width: 100%; border-radius: 0.4rem; background: #fff; }
+@media screen and (max-width: 44.9375em) {
+  .md-typeset .hero { grid-template-columns: 1fr; }
+}
+.md-typeset .grid.cards > ul > li { display: flex; flex-direction: column; }

@@ -1,0 +1,26 @@
+{#- Copy of the theme content partial with a banner on ASHS Classic pages and
+    a link to the parallel page in the other section. -#}
+{% set u = page.url if page and page.url else "" %}
+{% set cmap = config.extra.counterparts or {} %}
+{% set cp = cmap[u] if u in cmap else none %}
+{% include "partials/actions.html" %}
+{% if u[:5] == "ashs/" %}
+  <div class="admonition tip vt-banner">
+    <p class="admonition-title">You are viewing the documentation for classic ASHS</p>
+    <p>For new projects we recommend <a href="{{ (cp or 'hyperashs/') | url }}">HyperASHS</a>, which produces
+    isotropic-resolution segmentations of the same structures and runs on a single GPU workstation.</p>
+  </div>
+{% endif %}
+{% if "<h1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
+{{ page.content }}
+{% if cp and u[:10] == "hyperashs/" %}
+  <p class="vt-other">Using classic ASHS? See the <a href="{{ cp | url }}">equivalent page for ASHS Classic</a>.</p>
+{% elif cp and u[:5] == "ashs/" %}
+  <p class="vt-other">See the <a href="{{ cp | url }}">equivalent page for HyperASHS</a>.</p>
+{% endif %}
+{% include "partials/tags.html" %}
+{% include "partials/source-file.html" %}
+{% include "partials/feedback.html" %}
+{% include "partials/comments.html" %}
