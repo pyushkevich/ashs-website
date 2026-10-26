@@ -22,7 +22,6 @@ All HyperASHS repositories are at <https://huggingface.co/upennpatchlab>.
 | Template | Hugging Face repository |
 |---|---|
 | Aging 3T (used by the current models) | [upennpatchlab/hyperresashs_template_aging3t_v1](https://huggingface.co/upennpatchlab/hyperresashs_template_aging3t_v1) |
-| CPLEX 3T | [upennpatchlab/hyperresashs_template_cplex3t_v1](https://huggingface.co/upennpatchlab/hyperresashs_template_cplex3t_v1) |
 | Whole brain (for tasks that work on the whole brain) | [upennpatchlab/hyperresashs_template_wholebrain_v1](https://huggingface.co/upennpatchlab/hyperresashs_template_wholebrain_v1) |
 
 **Model directory.** [upennpatchlab/hyperresashs_atlas_directory](https://huggingface.co/upennpatchlab/hyperresashs_atlas_directory) lists the models that `hrashs list` shows.
