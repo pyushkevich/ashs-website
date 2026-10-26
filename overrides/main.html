@@ -1,5 +1,11 @@
 {% extends "base.html" %}
 
+{#- Larger icons for bookmarks, tab strips and home screens. -#}
+{% block extrahead %}
+  <link rel="icon" type="image/png" sizes="192x192" href="{{ 'assets/images/favicon-192.png' | url }}">
+  <link rel="apple-touch-icon" href="{{ 'assets/images/apple-touch-icon.png' | url }}">
+{% endblock %}
+
 {#- Page-title banner below the header, as on the old Google Site. A page can
     set `banner` and `banner_subtitle` in its front matter to override it. -#}
 {% block hero %}

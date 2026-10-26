@@ -102,7 +102,7 @@ nav = [
 [project.theme]
 custom_dir = "overrides"
 language = "en"
-favicon = "assets/images/logo.svg"
+favicon = "assets/images/favicon-32.png"
 icon.logo = "lucide/brain"
 font.text = "Lato"
 features = [
